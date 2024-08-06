@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-DEFAULT_USER = User.objects.get(id=1) 
+
 class Note(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
