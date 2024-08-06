@@ -3,6 +3,7 @@ import { useState } from "react";
 import api from "../api";
 import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
+import Loadingindicator from "./Loadingindicator";
 
 // eslint-disable-next-line react/prop-types
 function Form({ route, method }) {
@@ -52,6 +53,7 @@ function Form({ route, method }) {
         placeholder="Password"
       />
 
+      {loading && <Loadingindicator />}
       <button className="form-button" type="submit">
         {name}
       </button>
